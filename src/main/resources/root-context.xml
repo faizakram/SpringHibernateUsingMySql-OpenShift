@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<annotation-driven />
+	
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- View Resolver (Url Based Resolver And Multi-part) and Page Manage Block -->
+	<beans:bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="prefix" value="/website/" />
+		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+	</beans:bean>
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	<!-- View Resolver (Url Based Resolver And Multi-part) and Page Manage Block -->
+
+	<!-- Stereo Type Annotation For Scan All Packages Block -->
+	<context:component-scan base-package="com.Accer"
+		scoped-proxy="targetClass" />
+	<!-- Stereo Type Annotation For Scan All Packages Block -->
+
+	<!-- Custom AutoWire Process Block -->
+	<beans:bean id="reCaptcha" class="net.tanesha.recaptcha.ReCaptchaImpl" />
+	<beans:bean id="BCryptPasswordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" scope="prototype"/>
+	<beans:bean id="RandomClass" class="java.util.Random" scope="prototype"/>
+	<beans:bean id="BigInteger" class="java.math.BigInteger" scope="prototype">
+		<beans:constructor-arg value="130"/>
+		<beans:constructor-arg ref="RandomClass"/>
+	</beans:bean> 
+	<beans:bean id="model" class="org.springframework.web.servlet.ModelAndView" scope="prototype"/>
+	<beans:bean id="MailingClass" class="com.Accer.MaillingAPI.SendMessage" scope="prototype"/>
+	<beans:bean id="Response" class="com.Accer.JsonEntity.Response" scope="prototype"/>
+	<!--MailingApi  -->
+	<beans:bean id="MailingAPI" class="com.sun.jersey.api.client.filter.HTTPBasicAuthFilter">
+		<beans:constructor-arg value="api" type="java.lang.String"/>
+		<beans:constructor-arg value="key-056b745ba044439adsfsddsaff06d99272313a23c" type="java.lang.String"/>
+		<!-- put your Key here -->
+	</beans:bean>
+	<beans:bean id="MultivaluedMapImpl" class="com.sun.jersey.core.util.MultivaluedMapImpl" scope="prototype"/>
+	<!--MailingApi  -->
+	<!-- Custom AutoWire Process Block -->
+	
+	<!--Task Executer Open  -->
+	<beans:bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor" scope="prototype">
+		<beans:property name="corePoolSize" value="5" />
+		<beans:property name="maxPoolSize" value="10" />
+		<beans:property name="queueCapacity" value="20"/>
+	</beans:bean>
+	<!--Close  -->
+	
+	<!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
+	<beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<beans:property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<beans:property name="jdbcUrl"
+			value="jdbc:mysql://localhost:3306/accer?autoReconnect=true" />
+		<beans:property name="user" value="root" />
+		<beans:property name="password" value="root"/>
+		<beans:property name="initialPoolSize" value="5"/>
+		<beans:property name="minPoolSize" value="5" />
+		<beans:property name="maxPoolSize" value="100" />
+		<beans:property name="acquireIncrement" value="5" />
+		<beans:property name="acquireRetryDelay" value="1000" />
+		<beans:property name="debugUnreturnedConnectionStackTraces"
+			value="true"/>
+		<beans:property name="maxIdleTime" value="300"/>
+		<beans:property name="unreturnedConnectionTimeout"
+			value="300000" />
+		<beans:property name="checkoutTimeout" value="3000000" />
+		<beans:property name="idleConnectionTestPeriod" value="600000" />
+	</beans:bean>
+	
+	
+
+	<!-- Manage Session Factory And Scan Entity Package Block -->
+	<beans:bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="myDataSource" />
+		<beans:property name="packagesToScan">
+			<beans:array>
+				<beans:value>com.Accer.Entity</beans:value>
+			</beans:array>
+		</beans:property>
+	</beans:bean>
+	<!-- Manage Session Factory And Scan Entity Package Block -->
+
+	<!-- Transaction Management Block with Session Factory Block -->
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory" ref="mySessionFactory" />
+	</beans:bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- Transaction Management Block with Session Factory Block -->
+
+
+
+
+</beans:beans>	
+

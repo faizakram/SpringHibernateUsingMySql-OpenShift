@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http auto-config="true">
+		<headers />
+		<intercept-url pattern="/AdminInside" access="ROLE_Admin, ROLE_SubAdmin"/>
+		<intercept-url pattern="/profile" access="ROLE_Admin"/>
+		
+		<form-login login-page="/AdminLogin" default-target-url="/AdminInside"
+			authentication-failure-url="/AdminLogin?error" username-parameter="username"
+			password-parameter="password" />
+			
+		<logout logout-success-url="/AdminLogin?logout" />
+	</http>
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder ref="encoder" />
+			<jdbc-user-service id="userService"
+				data-source-ref="myDataSource"
+				users-by-username-query="select User_Email_Id,password,enable from users where User_Email_Id=?"
+				authorities-by-username-query="SELECT User_Email_Id,Role  FROM users u, roles r, user_role ur WHERE u.Id=ur.User_Id AND ur.Role_Id=r.Id AND u.User_Email_Id=?" />
+		</authentication-provider>
+
+	</authentication-manager>
+
+	<beans:bean id="encoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<beans:constructor-arg name="strength" value="10" />
+	</beans:bean>
+
+
+</beans:beans>
