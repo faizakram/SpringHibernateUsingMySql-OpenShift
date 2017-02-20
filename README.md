@@ -1,4 +1,4 @@
-<h1>Author<a href="http://faizakram.com"><br>Md Faiz Akram</a></h1>
+<h1>Author<a href="http://faizakram.com" target="_blank"><br>Md Faiz Akram</a></h1>
 
 
 
@@ -8,8 +8,6 @@
 	<li>Spring Security</li>
 	<li>Hibernate</li>
 	<li>Maven</li>
-	<li>JSP</li>
-	<li>JSP</li>
 	<li>JSP</li>
 	<li>Mailing API</li>
 	<li>File Uploading</li>
@@ -52,4 +50,9 @@
 		<beans:property name="idleConnectionTestPeriod" value="600000" />
 	</beans:bean>
 
+<h3>Mailing API Configuration</h3>
+	<beans:bean id="MailingAPI" class="com.sun.jersey.api.client.filter.HTTPBasicAuthFilter">
+		<beans:constructor-arg value="api" type="java.lang.String"/>
+		<beans:constructor-arg value="Put Your Key Here" type="java.lang.String"/>
+	</beans:bean>
 
