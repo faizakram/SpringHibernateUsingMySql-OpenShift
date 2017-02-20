@@ -1,17 +1,30 @@
-<h1><a href="http://faizakram.com">Author <br>Md Faiz Akram</a></h1>
+<h1>Author<a href="http://faizakram.com"><br>Md Faiz Akram</a></h1>
 
 
 
 <h2>Projcect Features Backed</h2>
    <ul>
-	<li>1. Spring MVC</li>
-	<li>2. Spring Security</li>
-	<li>3. Hibernate</li>
-	<li>4. Mailing API</li>
-	<li>5. File Uploading</li>
-	<li>6. File Compressor</li>
-	<li>7. Ajax Call with File Uploading</li>
-	<li>8. JSTL</li>
+	<li> Spring MVC</li>
+	<li>Spring Security</li>
+	<li>Hibernate</li>
+	<li>Maven</li>
+	<li>JSP</li>
+	<li>JSP</li>
+	<li>JSP</li>
+	<li>Mailing API</li>
+	<li>File Uploading</li>
+	<li>File Compressor</li>
+	<li>Ajax Call with File Uploading</li>
+	<li>JSTL</li>
+	<li>JSP</li>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>jQuery</li>
+	<li>JS</li>
+	<li>BootStrap</li>
+	<li>Sweet Alert JS</li>
+	<li>Basic Dashboard</li>
+	<li>Basic Profile</li>
    </ul>
 
 
