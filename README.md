@@ -27,7 +27,7 @@
 
 
 
-<h3>Connection Pulling via hibernate c3p0 root-context.xml</h3>
+<h3>Connection Pulling using hibernate c3p0</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
 	<beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
@@ -54,5 +54,14 @@
 	<beans:bean id="MailingAPI" class="com.sun.jersey.api.client.filter.HTTPBasicAuthFilter">
 		<beans:constructor-arg value="api" type="java.lang.String"/>
 		<beans:constructor-arg value="Put Your Key Here" type="java.lang.String"/>
+	</beans:bean>
+	
+<h3>View Resolver Configuration</h3>
+	<beans:bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="prefix" value="/website/" />
+		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
 	</beans:bean>
 
