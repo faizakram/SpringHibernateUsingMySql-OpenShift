@@ -25,7 +25,7 @@
 	<li>Basic Profile</li>
    </ul>
 
-![Screenshot of jquery-comments](login.png?raw=true "Screenshot of jquery-comments")
+<img src="login.png"/>
 
 <h3>Connection Pulling using hibernate c3p0</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
