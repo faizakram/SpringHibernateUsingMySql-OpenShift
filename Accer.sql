@@ -61,10 +61,7 @@ CREATE TABLE `user_profile` (
 /*Data for the table `user_profile` */
 
 insert  into `user_profile`(`User_Email_Id`,`Name`,`DOB`,`DOJ`,`MobileNo`,`Skype`,`LinkedIn`,`Facebook`,`Twitter`,`GooglePlus`,`Website`,`Address`,`ProfilePic`) values 
-('alokjha546@gmail.com','Alok',NULL,'01/18/2017',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-('faiz.krm@gmail.com','Faiz Akram',NULL,'01/14/2017','9990858653','faiz.akram37','https://www.linkedin.com/in/faiz-akram-7420b680','https://www.facebook.com/faizakram.java1.7','https://twitter.com/FaizKrm','https://plus.google.com/108780002047831238307/','http://faizakram.com/','New Delhi','profilePic/-1320883944.jpg'),
-('faiz8653@cybotech.in','Faiz','06/09/1992','02/06/2017','9990858653',NULL,NULL,NULL,NULL,NULL,NULL,'Delhi',NULL),
-('surajmba.mba@gmail.com','Suraj',NULL,'01/18/2017','9304686339','','','surajmca_mca@sify.com','','','','Gola Road, Near Imambara, Nawada- Bihar (805110)','profilePic/226800882.jpg');
+('faiz.krm@gmail.com','Faiz Akram',NULL,'01/14/2017','9990858653','faiz.akram37','https://www.linkedin.com/in/faiz-akram-7420b680','https://www.facebook.com/faizakram.java1.7','https://twitter.com/FaizKrm','https://plus.google.com/108780002047831238307/','http://faizakram.com/','New Delhi','profilePic/-1781454019.jpg');
 
 /*Table structure for table `user_role` */
 
@@ -82,10 +79,7 @@ CREATE TABLE `user_role` (
 /*Data for the table `user_role` */
 
 insert  into `user_role`(`User_Id`,`Role_Id`) values 
-(18,1),
-(26,1),
-(27,2),
-(28,4);
+(18,1);
 
 /*Table structure for table `user_verfication` */
 
@@ -107,9 +101,7 @@ CREATE TABLE `user_verfication` (
 /*Data for the table `user_verfication` */
 
 insert  into `user_verfication`(`Verification_Id`,`User_Email_Id`,`Admin_Email_Verification`,`User_Email_Verification`,`Mobile_Verification`,`Forgot_Password`,`Account_Status`) values 
-(38,'faiz.krm@gmail.com','Verified','Verified',NULL,NULL,'Continue'),
-(47,'surajmba.mba@gmail.com','Verified','Verified',NULL,NULL,'Continue'),
-(48,'alokjha546@gmail.com','Verified','Verified',NULL,NULL,'Continue');
+(38,'faiz.krm@gmail.com','Verified','Verified',NULL,NULL,'Continue');
 
 /*Table structure for table `users` */
 
@@ -129,10 +121,7 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`Id`,`User_Email_Id`,`Password`,`Enable`) values 
-(18,'faiz.krm@gmail.com','$2a$10$CQSkosYIOykF3H90Q0Eqa.h3wTnkNZZAg0.6dHWKWK9RoNqJ15SsS',1),
-(26,'surajmba.mba@gmail.com','$2a$10$kHXXEj20D9D5Yx1s9bWlSef510dSI1KfBQAfzezzi/AHIBftLkvM.',1),
-(27,'alokjha546@gmail.com','$2a$10$5bh6P22WKZlR6oKde.PHrOPqreL6v4MBUtsquwivt49iXuJEjt8ui',1),
-(28,'faiz8653@cybotech.in','$2a$10$UBQcO0E.te3.NI986.niM.w365ld4I3zjEWOpljBIYh02sB1ro2wO',1);
+(18,'faiz.krm@gmail.com','$2a$10$phdHoBIKs0Ht/JHWsF/cqOpiDTW/5SR/jd2cb/L6L8AlNJA4KahYm',1);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
