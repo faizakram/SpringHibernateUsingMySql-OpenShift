@@ -65,24 +65,34 @@
 			value="org.springframework.web.servlet.view.JstlView" />
 	</beans:bean>
 	
-<h3></h3>
+<h3>Genrate you own Password crypto.bcrypt.BCryptPasswordEncoder</h3>
+``` 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+public class PasswordEncoderGenerator {
+	
+	public static void main(String[] args) {
+
+		 int i = 0;
+		 while (i < 10) {
+		  String password = "1234";
+		  BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		  String hashedPassword = passwordEncoder.encode(password);
+
+		  System.out.println(hashedPassword);
+		  i++;
+		 }
+
+		  }
+}
+```	
+<h3>Project Table Schema View</h3>
 
 
 <html>
 <head>
-<title>Schema for database 'accer'</title>
+<title>Schema for database</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
-<style type="text/css">
-<!--
-.toptext {font-family: verdana; color: #000000; font-size: 20px; font-weight: 600; width:550;  background-color:#999999; }
-.normal {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000}
-.fieldheader {font-family: verdana; color: #000000; font-size: 12px; font-weight: 600; width:550;  background-color:#c0c0c0; }
-.fieldcolumn {font-family: verdana; color: #000000; font-size: 10px; font-weight: 600; width:550;  background-color:#ffffff; }
-.header {background-color: #ECE9D8;}
-.headtext {font-family: verdana; color: #000000; font-size: 12; font-weight: 600; width:550;  background-color:#999999; }
-BR.page {page-break-after: always}
-//-->
-</style>
+
 </head>
 <body bgcolor='#ffffff' topmargin="0">
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
