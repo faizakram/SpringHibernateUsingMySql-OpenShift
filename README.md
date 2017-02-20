@@ -1,4 +1,4 @@
-<!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
+//Local Data base Configuration and Manage Connection Pulling Concept Block 
 	<beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<beans:property name="driverClass" value="com.mysql.jdbc.Driver" />
