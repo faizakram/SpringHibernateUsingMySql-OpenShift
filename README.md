@@ -25,7 +25,7 @@
 	<li>Basic Profile</li>
    </ul>
 
-<img src="login.png"/>
+<img src="http://faizakram.com/resources/images/profilepic.jpg"/>
 
 <h3>Connection Pulling using hibernate c3p0</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
