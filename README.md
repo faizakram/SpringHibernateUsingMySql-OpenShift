@@ -1,3 +1,4 @@
+<h3>Inside root-context.xml</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
 	<beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
