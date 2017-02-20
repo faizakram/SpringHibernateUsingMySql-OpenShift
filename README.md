@@ -1,17 +1,18 @@
-
-<h1>Projcect Features</h1>
-<ul>
-<li>1. Spring MVC</li>
-<li>2. Spring Security</li>
-<li>3. Hibernate</li>
-<li>4. Mailing API</li>
-<li>5. File Uploading</li>
-<li>6. File Compressor</li>
-<li>7. Ajax Call with File Uploading</li>
-<li>8. JSTL</li>
+<h1><a href="http://faizakram.com">Author <br>Md Faiz Akram</a></h1>
 
 
-</ul>
+
+<h2>Projcect Features Backed</h2>
+   <ul>
+	<li>1. Spring MVC</li>
+	<li>2. Spring Security</li>
+	<li>3. Hibernate</li>
+	<li>4. Mailing API</li>
+	<li>5. File Uploading</li>
+	<li>6. File Compressor</li>
+	<li>7. Ajax Call with File Uploading</li>
+	<li>8. JSTL</li>
+   </ul>
 
 
 
