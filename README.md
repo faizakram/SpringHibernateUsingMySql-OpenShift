@@ -1,4 +1,21 @@
-<h3>Inside root-context.xml</h3>
+
+<h1>Projcect Features</h1>
+<ul>
+<li>1. Spring MVC</li>
+<li>2. Spring Security</li>
+<li>3. Hibernate</li>
+<li>4. Mailing API</li>
+<li>5. File Uploading</li>
+<li>6. File Compressor</li>
+<li>7. Ajax Call with File Uploading</li>
+<li>8. JSTL</li>
+
+
+</ul>
+
+
+
+<h3>Connection Pulling via hibernate c3p0 root-context.xml</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
 	<beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
@@ -20,4 +37,5 @@
 		<beans:property name="checkoutTimeout" value="3000000" />
 		<beans:property name="idleConnectionTestPeriod" value="600000" />
 	</beans:bean>
+
 
