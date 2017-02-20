@@ -1,6 +1,6 @@
 <h1>Author<a href="http://faizakram.com" target="_blank"><br>Md Faiz Akram</a></h1>
 
-
+<img src="http://faizakram.com/github/SpringHibernateUsingMySql/Dashboard.png"/ style="width:400px;">
 
 <h2>Projcect Features Backed</h2>
    <ul>
@@ -25,7 +25,7 @@
 	<li>Basic Profile</li>
    </ul>
 
-<img src="http://faizakram.com/resources/images/profilepic.jpg"/>
+
 
 <h3>Connection Pulling using hibernate c3p0</h3>
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
