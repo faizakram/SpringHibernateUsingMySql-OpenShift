@@ -5,7 +5,7 @@
 <img src="http://faizakram.com/github/SpringHibernateUsingMySql/Dashboard.png"/ style="width:400px;">
 <img src="http://faizakram.com/github/SpringHibernateUsingMySql/Profile.png"/ style="width:400px;">
 
-<h2>Projcect Features Backed</h2>
+<h2>Projcect Features</h2>
    <ul>
 	<li> Spring MVC</li>
 	<li>Spring Security</li>
@@ -68,7 +68,7 @@
 			value="org.springframework.web.servlet.view.JstlView" />
 	</beans:bean>
 	
-<h3>Genrate you own Password crypto.bcrypt.BCryptPasswordEncoder</h3>
+<h3>Genrate you own Password org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder</h3>
 ``` 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class PasswordEncoderGenerator {
