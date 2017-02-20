@@ -1,4 +1,4 @@
-<code>
+```Connection Pulling With Hibernate
 <!-- Local Data base Configuration and Manage Connection Pulling Concept Block -->
 <beans:bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
@@ -20,4 +20,4 @@
 		<beans:property name="checkoutTimeout" value="3000000" />
 		<beans:property name="idleConnectionTestPeriod" value="600000" />
 	</beans:bean>
-</code>
+
