@@ -92,14 +92,8 @@ public class PasswordEncoderGenerator {
 ```	
 <h3>Project Table Schema View</h3>
 
+ 
 
-<html>
-<head>
-<title>Schema for database</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
-
-</head>
-<body bgcolor='#ffffff' topmargin="0">
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
 <tr>
 <td class="toptext"><p align="center">accer</td>
@@ -942,7 +936,6 @@ public class PasswordEncoderGenerator {
 
 
 <a href="#header"><p class="normal">Back</a>
-<h1 width="100%"></body>
-</html>
+<h1 width="100%">
 
 
